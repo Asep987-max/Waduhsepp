@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: portfolio-website
+    env: node
+    buildCommand: cd client && npm install && npm run build && cd .. && npm install
+    startCommand: npm start
