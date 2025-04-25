@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Portofolio Pribadi - Tugas Sekolah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Scroll reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Floating animation for images */
+        @keyframes floatUpDown {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        .float-animation {
+            animation: floatUpDown 4s ease-in-out infinite;
+        }
+        /* Gaya tambahan untuk bagian Matematika */
+        .matematika-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto flex items-center justify-between p-4 md:p-6">
+            <a class="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition" href="#home">
+                PortofolioKu
+            </a>
+            <ul class="hidden md:flex space-x-8 text-lg font-medium">
+                <li><a class="hover:text-indigo-600 transition" href="#home">Home</a></li>
+                <li><a class="hover:text-indigo-600 transition" href="#about">About</a></li>
+                <li><a class="hover:text-indigo-600 transition" href="#matematika">Matematika</a></li>
+                <li><a class="hover:text-indigo-600 transition" href="#tugas">Tugas</a></li>
+                <li><a class="hover:text-indigo-600 transition" href="#kontak">Kontak</a></li>
+            </ul>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <i class="fas fa-bars text-2xl text-indigo-600"></i>
+            </button>
+        </nav>
+        <div class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+            <ul class="flex flex-col p-4 space-y-4 text-lg font-medium">
+                <li><a class="block hover:text-indigo-600 transition" href="#home">Home</a></li>
+                <li><a class="block hover:text-indigo-600 transition" href="#about">About</a></li>
+                <li><a class="block hover:text-indigo-600 transition" href="#matematika">Matematika</a></li>
+                <li><a class="block hover:text-indigo-600 transition" href="#tugas">Tugas</a></li>
+                <li><a class="block hover:text-indigo-600 transition" href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="pt-20 pb-10 container mx-auto px-4">
+        <section class="py-20" id="home">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl font-bold text-indigo-700 mb-4 reveal">
+                        Selamat Datang di PortofolioKu
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8 reveal delay-200">
+                        Saya [Nama Anda], seorang [Peran Anda] yang bersemangat dalam bidang [Bidang Anda].
+                        Di sini Anda akan menemukan koleksi tugas dan proyek saya.
+                    </p>
+                    <a class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 reveal delay-400" href="#tugas">
+                        Lihat Tugas Saya
+                    </a>
+                </div>
+                <div class="md:w-1/2 reveal delay-600">
+                    <img alt="Ilustrasi Portofolio" class="w-full rounded-lg shadow-lg float-animation" src="https://storage.googleapis.com/a1aa/image/e995579e-7174-4518-8549-f551471548e5.png"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-indigo-50" id="about">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2 reveal">
+                    <img alt="Foto Profil" class="w-full rounded-lg shadow-lg float-animation" src="https://storage.googleapis.com/a1aa/image/69878189-8d45-4404-9884-7e584f3d441f.jpg"/>
+                </div>
+                <div class="md:w-1/2 text-center md:text-left reveal delay-200">
+                    <h2 class="text-4xl font-bold text-indigo-700 mb-4">Tentang Saya</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Halo! Saya [Nama Anda], seorang [Peran Anda] dengan minat mendalam di bidang [Bidang Anda].
+                        Saya memiliki pengalaman dalam [Pengalaman Anda] dan saya selalu bersemangat untuk belajar hal-hal baru.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Dalam portofolio ini, Anda akan menemukan beberapa proyek dan tugas yang telah saya kerjakan.
+                        Setiap proyek mencerminkan kemampuan saya dalam [Kemampuan Anda].
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Terima kasih telah mengunjungi portofolio saya! Jangan ragu untuk menghubungi saya jika Anda memiliki pertanyaan
+                        atau ingin berdiskusi lebih lanjut.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-indigo-50 px-6" id="matematika">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl font-bold text-indigo-700 mb-12 text-center reveal">
+                    Tugas Matematika
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="bg-white rounded-lg shadow-lg p-6 reveal matematika-card">
+                        <img src="https://storage.googleapis.com/a1aa/image/5c604bb7-e03b-465f-7174-e916a17d8031.jpg" alt="Diagram Lingkaran" class="rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Diagram Lingkaran</h3>
+                        <p class="text-gray-700">Pelajari cara membuat dan membaca diagram lingkaran untuk memvisualisasikan data.</p>
+                        <a href="matematika.html#diagram-lingkaran" class="text-indigo-600 hover:text-indigo-800 transition font-semibold inline-block mt-4">Lihat Detail →</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 reveal delay-100 matematika-card">
+                        <img src="https://storage.googleapis.com/a1aa/image/d4c269ab-d471-46ec-b6a4-c96cf23b9815.jpg" alt="Aljabar dan Persamaan" class="rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Aljabar dan Persamaan</h3>
+                        <p class="text-gray-700">Selesaikan berbagai jenis persamaan, dari linear hingga kuadrat, dan kuasai konsep aljabar.</p>
+                        <a href="matematika.html#aljabar-persamaan" class="text-indigo-600 hover:text-indigo-800 transition font-semibold inline-block mt-4">Lihat Detail →</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 reveal delay-200 matematika-card">
+                        <img src="https://storage.googleapis.com/a1aa/image/90aa2027-76b5-4af0-0a04-e7b662feebba.jpg" alt="Grafik Fungsi" class="rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Grafik Fungsi</h3>
+                        <p class="text-gray-700">Pelajari cara menggambar dan menganalisis grafik fungsi, termasuk fungsi linear, kuadrat, dan lainnya.</p>
+                        <a href="matematika.html#grafik-fungsi" class="text-indigo-600 hover:text-indigo-800 transition font-semibold inline-block mt-4">Lihat Detail →</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 reveal delay-300 matematika-card">
+                        <img src="https://storage.googleapis.com/a1aa/image/d0f04e44-df2f-4456-0655-3e8d992c9635.jpg" alt="Geometri Segitiga" class="rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Geometri Segitiga</h3>
+                        <p class="text-gray-700">Hitung luas, keliling, dan pelajari teorema Pythagoras dalam geometri segitiga.</p>
+                        <a href="matematika.html#geometri-segitiga" class="text-indigo-600 hover:text-indigo-800 transition font-semibold inline-block mt-4">Lihat Detail →</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 reveal delay-400 matematika-card">
+                        <img src="https://storage.googleapis.com/a1aa/image/303277a8-7449-4043-2935-ce6b9310d707.jpg" alt="Statistika Dasar" class="rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Statistika Dasar</h3>
+                        <p class="text-gray-700">Pelajari dasar-dasar statistika, termasuk mean, median, modus, dan penyajian data.</p>
+                        <a href="matematika.html#statistika-dasar" class="text-indigo-600 hover:text-indigo-800 transition font-semibold inline-block mt-4">Lihat Detail →</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 reveal delay-500 matematika-card">
+                        <img src="https://storage.googleapis.com/a1aa/image/c823bdf8-f74b-4dfc-6d7a-f3a7bbd4a8fb.jpg" alt="Trigonometri" class="rounded-md mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Trigonometri</h3>
+                        <p class="text-gray-700">Ketahui fungsi trigonometri dan penerapannya dalam perhitungan sudut dan sisi segitiga.</p>
+                        <a href="matematika.html#trigonometri" class="text-indigo-600 hover:text-indigo-800 transition font-semibold inline-block mt-4">Lihat Detail →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20" id="tugas">
+            <h2 class="text-4xl font-bold text-indigo-700 mb-12 text-center reveal">
+                Ragam Tugas Sekolah
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between reveal">
+                    <h3 class="text-2xl font-semibold mb-4">Tugas 1: [Nama Tugas 1]</h3>
+                    <p class="text-gray-700 mb-4">Deskripsi singkat tugas 1.</p>
+                    <a class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 text-center" href="#">
+                        Lihat Detail
+                    </a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between reveal delay-200">
+                    <h3 class="text-2xl font-semibold mb-4">Tugas 2: [Nama Tugas 2]</h3>
+                    <p class="text-gray-700 mb-4">Deskripsi singkat tugas 2.</p>
+                    <a class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 text-center" href="#">
+                        Lihat Detail
+                    </a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between reveal delay-400">
+                    <h3 class="text-2xl font-semibold mb-4">Tugas 3: [Nama Tugas 3]</h3>
+                    <p class="text-gray-700 mb-4">Deskripsi singkat tugas 3.</p>
+                    <a class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 text-center" href="#">
+                        Lihat Detail
+                    </a>
+                </div>
+                </div>
+        </section>
+
+        <section class="py-20 bg-indigo-50" id="kontak">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-indigo-700 mb-12 text-center reveal">
+                    Hubungi Saya
+                </h2>
+                <div class="bg-white rounded-lg shadow-lg p-8 reveal delay-200">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-lg font-medium text-gray-700">Nama</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md py-3 px-4 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Nama Anda" required/>
+                            <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Nama harus diisi.</p>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md py-3 px-4 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="email@example.com" required/>
+                            <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Email tidak valid.</p>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-lg font-medium text-gray-700">Pesan</label>
+                            <textarea id="message" name="message" rows="5" class="mt-1 block w-full border border-gray-300 rounded-md py-3 px-4 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Pesan Anda" required></textarea>
+                            <p id="message-error" class="text-red-500 text-sm mt-1 hidden">Pesan harus diisi.</p>
+                        </div>
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 w-full">
+                            Kirim Pesan
+                        </button>
+                        <p id="form-success" class="text-green-600 text-md mt-4 text-center hidden">Pesan Anda telah terkirim!</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 py-6">
+        <div class="container mx-auto text-center text-gray-600">
+            © 2025 PortofolioKu. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Fungsi untuk menambahkan kelas 'active' saat elemen terlihat
+        function revealElements() {
+            const reveals = document.querySelectorAll('.reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                let elementVisible = 150; // Jarak elemen dari bagian atas window agar dianggap terlihat
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        // Tambahkan event listener untuk memanggil fungsi saat scroll
+        window.addEventListener('scroll', revealElements);
+        // Panggil fungsi saat halaman dimuat agar elemen yang sudah di posisi terlihat langsung muncul
+        revealElements();
+
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+
+        const form = document.getElementById('contact-form');
+        const nameInput = form.querySelector('#name');
+        const emailInput = form.querySelector('#email');
+        const messageInput = form.querySelector('#message');
+        const nameError = form.querySelector('#name-error');
+        const emailError = form.querySelector('#email-error');
+        const messageError = form.querySelector('#message-error');
+        const formSuccess = form.querySelector('#form-success');
+
+        function validateEmail(email) {
+            const re = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+            return re.test(email.toLowerCase());
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let valid = true;
+
+            if (nameInput.value.trim() === '') {
+                nameError.classList.remove('hidden');
+                valid = false;
+            } else {
+                nameError.classList.add('hidden');
+            }
+
+            if (!validateEmail(emailInput.value.trim())) {
+                emailError.classList.remove('hidden');
+                valid = false;
+            } else {
+                emailError.classList.add('hidden');
+            }
+
+            if (messageInput.value.trim() === '') {
+                messageError.classList.remove('hidden');
+                valid = false;
+            } else {
+                messageError.classList.add('hidden');
+            }
+
+            if (valid) {
+                // Simulate sending message
+                formSuccess.classList.remove('hidden');
+                form.reset();
+                setTimeout(() => {
+                    formSuccess.classList.add('hidden');
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>
