@@ -39,6 +39,28 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        /* Tambahkan di bagian style */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.hover-zoom {
+    transition: transform 0.3s;
+}
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+.hover-zoom:hover {
+    transform: scale(1.02);
+}
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -53,6 +75,9 @@
                 <li><a class="hover:text-indigo-600 transition" href="#matematika">Matematika</a></li>
                 <li><a class="hover:text-indigo-600 transition" href="#tugas">Tugas</a></li>
                 <li><a class="hover:text-indigo-600 transition" href="#kontak">Kontak</a></li>
+                <!-- Di dalam navigasi -->
+<li><a class="hover:text-indigo-600 transition" href="bahasa.html">Bahasa</a></li>
+<li><a class="hover:text-indigo-600 transition" href="ipa.html">IPA</a></li>
             </ul>
             <button class="md:hidden focus:outline-none" id="menu-btn">
                 <i class="fas fa-bars text-2xl text-indigo-600"></i>
@@ -88,6 +113,20 @@
                     <img alt="Ilustrasi Portofolio" class="w-full rounded-lg shadow-lg float-animation" src="https://storage.googleapis.com/a1aa/image/e995579e-7174-4518-8549-f551471548e5.png"/>
                 </div>
             </div>
+            <!-- Bagian Gambar -->
+<div class="md:w-1/2 reveal delay-600 relative"> <!-- Tambahkan class "relative" -->
+    <img alt="Ilustrasi Portofolio" 
+         class="w-full rounded-lg shadow-lg float-animation hover-zoom" 
+         src="https://storage.googleapis.com/..."/>
+    
+    <!-- Elemen Baru: Sticky Note -->
+    <div class="absolute bottom-0 right-0 bg-yellow-100 p-4 rounded-lg shadow-md transform transition hover:scale-105 -rotate-3">
+        <p class="text-sm font-medium text-gray-800">
+            📌 Sedang mengerjakan: 
+            <span class="text-indigo-600">Tugas Trigonometri</span>
+        </p>
+    </div>
+</div>
         </section>
 
         <section class="py-20 bg-indigo-50" id="about">

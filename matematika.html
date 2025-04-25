@@ -133,6 +133,27 @@
                      <p class="text-xl font-semibold text-indigo-700 my-2">L = 1/2 * 10 cm * 8 cm = 40 cm²</p>
                  </div>
              </div>
+             <!-- Di dalam section Geometri Segitiga -->
+<div class="bg-white rounded-lg shadow-md p-6 mb-4">
+    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Kalkulator Luas Segitiga</h4>
+    <div class="space-y-4">
+        <input type="number" id="alas" class="w-full p-2 border rounded-md" placeholder="Masukkan alas (cm)">
+        <input type="number" id="tinggi" class="w-full p-2 border rounded-md" placeholder="Masukkan tinggi (cm)">
+        <button onclick="hitungLuas()" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+            Hitung Luas
+        </button>
+        <div id="hasil" class="font-semibold text-indigo-700"></div>
+    </div>
+</div>
+
+<script>
+function hitungLuas() {
+    const alas = parseFloat(document.getElementById('alas').value);
+    const tinggi = parseFloat(document.getElementById('tinggi').value);
+    const hasil = 0.5 * alas * tinggi;
+    document.getElementById('hasil').innerHTML = `Luas Segitiga: ${hasil} cm²`;
+}
+</script>
         </section>
 
         <section class="py-16 px-6" id="statistika-dasar">

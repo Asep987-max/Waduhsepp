@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Copy head section dari matematika.html -->
+    <title>Tugas Bahasa - PortofolioKu</title>
+    <!-- ... -->
+    <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <title>Tugas Matematika - PortofolioKu</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+        <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .math-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .math-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+        }
+        .formula-box {
+            background-color: #f5f3ff;
+            border-left: 4px solid #6366f1;
+        }
+        .interactive-graph {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .interactive-graph:hover {
+            transform: scale(1.02);
+        }
+        </style>
+</head>
+<body class="bg-gray-100 mx-auto p-8">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto flex items-center justify-between p-4 md:p-6">
+            <a class="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition" href="#home">
+                PortofolioKu
+            </a>
+            <ul class="hidden md:flex space-x-8 text-lg font-medium">
+                <li><a class="hover:text-indigo-600 transition" href="#home">Home</a></li>
+                <li><a class="hover:text-indigo-600 transition" href="#about">About</a></li>
+                <li><a class="hover:text-indigo-600 transition" href="#matematika">Matematika</a></li>
+                <li><a class="hover:text-indigo-600 transition" href="#tugas">Tugas</a></li>
+                <li><a class="hover:text-indigo-600 transition" href="#kontak">Kontak</a></li>
+            </ul>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <i class="fas fa-bars text-2xl text-indigo-600"></i>
+            </button>
+        </nav>
+        <div class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+            <ul class="flex flex-col p-4 space-y-4 text-lg font-medium">
+                <li><a class="block hover:text-indigo-600 transition" href="#home">Home</a></li>
+                <li><a class="block hover:text-indigo-600 transition" href="#about">About</a></li>
+                <li><a class="block hover:text-indigo-600 transition" href="#matematika">Matematika</a></li>
+                <li><a class="block hover:text-indigo-600 transition" href="#tugas">Tugas</a></li>
+                <li><a class="block hover:text-indigo-600 transition" href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+        <!-- Copy header dari index.html -->
+    
+
+    <section class="py-16 px-6" id="puisi">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-indigo-700 mb-8">Analisis Puisi</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-4">
+                <div class="animate-pulse bg-gradient-to-r from-blue-100 to-indigo-100 p-4 rounded-md">
+                    <h3 class="text-xl font-semibold mb-2">"Senja di Pelabuhan Kecil"</h3>
+                    <p class="text-gray-700 mb-4">Karya: Chairil Anwar</p>
+                    <div class="space-y-2">
+                        <p class="text-gray-600 italic">"Ini kali tidak ada yang mencari cinta<br>
+                        di antara gudang, rumah tua, pada cerita<br>
+                        tiang serta temali..."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="py-16 px-6" id="geometri-segitiga">
+             <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-8">Geometri Segitiga</h2>
+                <div class="bg-white rounded-lg shadow-md p-6 mb-4 formula-box">
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Rumus Dasar</h4>
+                    <p class="text-gray-700">Luas Segitiga:</p>
+                    <p class="text-xl font-semibold text-indigo-700 my-2">L = 1/2 * alas * tinggi</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6 mb-4">
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Contoh Soal</h4>
+                    <p class="text-gray-700">Hitunglah luas segitiga dengan alas 10 cm dan tinggi 8 cm.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 mb-4">
+                     <p class="text-xl font-semibold text-indigo-700 my-2">L = 1/2 * 10 cm * 8 cm = 40 cm²</p>
+                 </div>
+             </div>
+             <!-- Di dalam section Geometri Segitiga -->
+<div class="bg-white rounded-lg shadow-md p-6 mb-4">
+    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Kalkulator Luas Segitiga</h4>
+    <div class="space-y-4">
+        <input type="number" id="alas" class="w-full p-2 border rounded-md" placeholder="Masukkan alas (cm)">
+        <input type="number" id="tinggi" class="w-full p-2 border rounded-md" placeholder="Masukkan tinggi (cm)">
+        <button onclick="hitungLuas()" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+            Hitung Luas
+        </button>
+        <div id="hasil" class="font-semibold text-indigo-700"></div>
+    </div>
+</div>
+
+<script>
+function hitungLuas() {
+    const alas = parseFloat(document.getElementById('alas').value);
+    const tinggi = parseFloat(document.getElementById('tinggi').value);
+    const hasil = 0.5 * alas * tinggi;
+    document.getElementById('hasil').innerHTML = `Luas Segitiga: ${hasil} cm²`;
+}
+</script>
+        </section>
+    <!-- Copy script section dari matematika.html -->
+</body>
+</html>
